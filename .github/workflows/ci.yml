@@ -16,7 +16,7 @@ jobs:
       image: ghcr.io/thecandianvendingmachine/krpc-buildenv:4.0.0
       credentials:
         username: ${{ github.actor }}
-        password: ${{ secrets.github_token }}
+        password: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - name: checkout
         uses: actions/checkout@v4
@@ -31,7 +31,7 @@ jobs:
       image: ghcr.io/thecandianvendingmachine/krpc-buildenv:4.0.0
       credentials:
         username: ${{ github.actor }}
-        password: ${{ secrets.github_token }}
+        password: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - name: checkout
         uses: actions/checkout@v4
@@ -62,7 +62,7 @@ jobs:
       image: ghcr.io/thecandianvendingmachine/krpc-buildenv:4.0.0
       credentials:
         username: ${{ github.actor }}
-        password: ${{ secrets.github_token }}
+        password: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - name: checkout
         uses: actions/checkout@v4
@@ -89,7 +89,7 @@ jobs:
       image: ghcr.io/thecandianvendingmachine/kprc-buildenv:4.0.0
       credentials:
         username: ${{ github.actor }}
-        password: ${{ secrets.github_token }}
+        password: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - name: checkout
         uses: actions/checkout@v4
