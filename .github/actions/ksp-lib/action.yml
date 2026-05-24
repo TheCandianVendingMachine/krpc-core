@@ -17,7 +17,7 @@ runs:
     - name: download
       run: |
         import urllib.request
-        urllib.request.urlretrieve("https://github.com/krpc/ksp-lib/raw/main/${{ inputs.game }}/${{ inputs.game }}-${{ inputs.version }}.zip", "${{ inputs.game }}-${{ inputs.version }}.zip")
+        urllib.request.urlretrieve("https://github.com/thecandianvendingmachine/ksp-lib/raw/main/${{ inputs.game }}/${{ inputs.game }}-${{ inputs.version }}.zip", "${{ inputs.game }}-${{ inputs.version }}.zip")
       shell: python
     - name: extract
       run: |

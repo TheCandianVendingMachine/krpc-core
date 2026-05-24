@@ -5,12 +5,12 @@ VERSION=`cat VERSION.txt`
 build:
 	docker build \
 	  --build-arg bazel_version=7.2.1 \
-	  -t ghcr.io/krpc/buildenv:$(VERSION) .
+	  -t ghcr.io/thecandianvendingmachine/krpc-buildenv:$(VERSION) .
 
 test:
-	docker run -t --user 1001:121 -i ghcr.io/krpc/buildenv:$(VERSION)
+	docker run -t -i ghcr.io/thecandianvendingmachine/krpc-buildenv:$(VERSION)
 
 deploy:
-	docker push ghcr.io/krpc/buildenv:$(VERSION)
-	docker tag ghcr.io/krpc/buildenv:$(VERSION) ghcr.io/krpc/buildenv:latest
-	docker push ghcr.io/krpc/buildenv:latest
+	docker push ghcr.io/thecandianvendingmachine/krpc-buildenv:$(VERSION)
+	docker tag ghcr.io/thecandianvendingmachine/krpc-buildenv:$(VERSION) ghcr.io/thecandianvendingmachine/krpc-buildenv:latest
+	docker push ghcr.io/thecandianvendingmachine/krpc-buildenv:latest

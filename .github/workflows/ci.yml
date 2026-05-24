@@ -13,7 +13,7 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     container:
-      image: ghcr.io/krpc/buildenv:3.3.0
+      image: ghcr.io/thecandianvendingmachine/krpc-buildenv:4.0.0
       credentials:
         username: ${{ github.actor }}
         password: ${{ secrets.github_token }}
@@ -28,7 +28,7 @@ jobs:
   build-krpc-core-linux:
     runs-on: ubuntu-latest
     container:
-      image: ghcr.io/krpc/buildenv:3.3.0
+      image: ghcr.io/thecandianvendingmachine/krpc-buildenv:4.0.0
       credentials:
         username: ${{ github.actor }}
         password: ${{ secrets.github_token }}
@@ -36,7 +36,7 @@ jobs:
       - name: checkout
         uses: actions/checkout@v4
       - name: fetch
-        uses: krpc/krpc-core/.github/actions/bazel-fetch@action-bazel-fetch-v1
+        uses: thecandianvendingmachine/krpc-core/.github/actions/bazel-fetch@action-bazel-fetch-v1
       - name: build
         run: >
           bazel build
@@ -59,7 +59,7 @@ jobs:
   build-krpc-core-sln-linux:
     runs-on: ubuntu-latest
     container:
-      image: ghcr.io/krpc/buildenv:3.3.0
+      image: ghcr.io/thecandianvendingmachine/krpc-buildenv:4.0.0
       credentials:
         username: ${{ github.actor }}
         password: ${{ secrets.github_token }}
@@ -67,7 +67,7 @@ jobs:
       - name: checkout
         uses: actions/checkout@v4
       - name: fetch
-        uses: krpc/krpc-core/.github/actions/bazel-fetch@action-bazel-fetch-v1
+        uses: thecandianvendingmachine/krpc-core/.github/actions/bazel-fetch@action-bazel-fetch-v1
       - name: deps
         run: bazel build //:csproj
       - name: build
@@ -86,7 +86,7 @@ jobs:
   test-krpc-core-linux:
     runs-on: ubuntu-latest
     container:
-      image: ghcr.io/krpc/buildenv:3.3.0
+      image: ghcr.io/thecandianvendingmachine/kprc-buildenv:4.0.0
       credentials:
         username: ${{ github.actor }}
         password: ${{ secrets.github_token }}
@@ -94,7 +94,7 @@ jobs:
       - name: checkout
         uses: actions/checkout@v4
       - name: fetch
-        uses: krpc/krpc-core/.github/actions/bazel-fetch@action-bazel-fetch-v1
+        uses: thecandianvendingmachine/krpc-core/.github/actions/bazel-fetch@action-bazel-fetch-v1
       - name: test
         run: bazel test //core:test
 
